@@ -1,20 +1,32 @@
 
 
-* {
-  margin: 0;
-  padding: 0;
-  color: green;
-  font-family: sans-serif;
+
+body {
+  background-color: #B0C4DE;
+  color: #4B0082;
+  font-family: serif;
+  font-size: 1.6875em;
+  text-align: center;
+  padding: 100px;
+
 }
 
 head {
-  font-family: cursive;
+  font-family: serif;
+  font-size: 1.75em;
+  text-align: center;
+  color: #4B0082;
+  margin: 0.5em;
+  padding: 100px;
 
 }
 
+table {
+  font-family: serif;
+  font-size: 1.125em;
+  text-align: center;
+}
 
-
-body {
-
-
+.style1 {
+  font-family: serif;
 }
