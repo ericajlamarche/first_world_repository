@@ -8,7 +8,7 @@ body {
   font-family: serif;
   font-size: 1.125em;
   text-align: center;
-  margin: auto;
+  margin: 0;
   padding: 0;
 }
 
@@ -47,7 +47,7 @@ table {
 
 .main-nav li {
   font-family: sans-serif;
-  font-size: 1.25em;
+  font-size: 1.125em;
   line-height: 30px;
   height: 30px;
   display: inline-block;
@@ -67,7 +67,7 @@ table {
   display: inline-block;
   width: 50%;
   font-family: sans-serif;
-  font-size: 1.25em;
+  font-size: 1.125em;
   list-style: circle;
   float: left;
   text-align: left;
@@ -77,7 +77,7 @@ table {
   display: inline-block;
   width: 50%;
   font-family: sans-serif;
-  font-size: 1.25em;
+  font-size: 1.125em;
   list-style: none;
   float: right;
   text-align: left;
@@ -85,21 +85,28 @@ table {
 
 .container1 {
   display: inline-block;
-  text-align: center;
   height: 150px;
 }
 
 .container1 ul {
   list-style: decimal;
-
+  font-family:sans-serif;
+  font-size: 1.125em;
+  text-align: left;
 }
 
 
 /* Footer -------------------- */
 
 #footer {
-  clear: both;
   color: #4B0082;
+  text-align: inherit;
+}
+
+.container2 {
+  margin: 25% 30%;
+  padding: 2em;
+
 }
 
 
