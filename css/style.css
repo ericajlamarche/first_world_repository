@@ -59,6 +59,10 @@ table {
      color: #fff;
 }
 
+.main-nav a:hover {
+      background-color: #00CCFF;
+}
+
 
 
 
@@ -122,27 +126,4 @@ table {
      font-size: 1.25em;
    }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.main-nav a:hover {
-      background-color: #00CCFF;
 }
