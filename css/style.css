@@ -1,23 +1,24 @@
-
+/* Base Styles -------------------- */
 
 
 body {
-  background-color: #B0C4DE;
+  background-color: #33CC99;
   color: #4B0082;
+  list-style: none;
   font-family: serif;
-  font-size: 1.6875em;
+  font-size: 1.125em;
   text-align: center;
-  padding: 100px;
-
+  margin: auto;
+  padding: 0;
 }
 
 head {
   font-family: serif;
-  font-size: 1.75em;
+  font-size: 1.125em;
   text-align: center;
   color: #4B0082;
-  margin: 0.5em;
-  padding: 100px;
+  padding: 0;
+  margin: 0;
 
 }
 
@@ -27,6 +28,113 @@ table {
   text-align: center;
 }
 
-.style1 {
-  font-family: serif;
+
+
+/* Navigation -------------------- */
+
+.main-nav {
+  background-color: #0099FF;
+  box-sizing: border-box;
+}
+
+.main-nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.main-nav li {
+  font-family: sans-serif;
+  font-size: 1.25em;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.main-nav a {
+     text-decoration: none;
+     color: #fff;
+}
+
+
+
+
+/* Content Area-------------------- */
+
+.primarycol {
+  display: inline-block;
+  width: 50%;
+  font-family: sans-serif;
+  font-size: 1.25em;
+  list-style: circle;
+  float: left;
+  text-align: left;
+}
+
+.secondarycol {
+  display: inline-block;
+  width: 50%;
+  font-family: sans-serif;
+  font-size: 1.25em;
+  list-style: none;
+  float: right;
+  text-align: left;
+}
+
+.container1 {
+  display: inline-block;
+  text-align: center;
+  height: 150px;
+}
+
+.container1 ul {
+  list-style: decimal;
+
+}
+
+
+/* Footer -------------------- */
+
+#footer {
+  clear: both;
+  color: #4B0082;
+}
+
+
+/* Media Queries -------------------- */
+
+@media screen and (min-width: 750px) {
+  .main-nav li {
+     width: 120px;
+     border-bottom: none;
+     height: 50px;
+     line-height: 50px;
+     font-size: 1.25em;
+   }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-nav a:hover {
+      background-color: #00CCFF;
 }

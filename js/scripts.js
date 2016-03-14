@@ -1,3 +1,5 @@
+/*
+
 var message = "Welcome to Web Accessibility";
 alert(message);
 
