@@ -105,12 +105,12 @@ nav#nav-mobile {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: #ff0032; }
+    background-color: #0099FF; }
   nav#nav-mobile li {
     display: block;
     padding: 5px 0;
     margin: 0 5px;
-    border-bottom: solid 1px #cc0028; }
+    border-bottom: solid 1px #fff; }
     nav#nav-mobile li:last-child {
       border-bottom: none; }
   nav#nav-mobile a {
@@ -150,6 +150,11 @@ nav#nav-mobile {
   list-style: decimal;
   font-size: 1.125em;
   text-align: left;
+}
+
+/*Map for Contact Page*/
+#map {
+  background-color: #CCC;
 }
 
 
