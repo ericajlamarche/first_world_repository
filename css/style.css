@@ -155,6 +155,8 @@ nav#nav-mobile {
 /*Map for Contact Page*/
 #map {
   background-color: #CCC;
+  width: 500px;
+  height: 400px;
 }
 
 

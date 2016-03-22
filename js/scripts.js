@@ -18,16 +18,16 @@ $(document).ready(function(){
 
 /*Read More Text Link*/
 
-/*$(function(){ /* to make sure the script runs after page load */
+$(function(){ /* to make sure the script runs after page load */
 
-/*    $('a.read_more').click(function(event){ /* find all a.read_more elements and bind the following code to them */
+    $('a.read_more').click(function(event){ /* find all a.read_more elements and bind the following code to them */
 
-      /*  event.preventDefault(); /* prevent the a from changing the url */
-      /*  $(this).parents('.tertiary').find('.more_text').show(); /* show the .more_text span */
+        event.preventDefault(); /* prevent the a from changing the url */
+        $(this).parents('.tertiary').find('.more_text').show(); /* show the .more_text span */
 
-  /*  });
+    });
 
-}); */
+});
 
 
 $(function(){ /* to make sure the script runs after page load */
@@ -39,7 +39,7 @@ $(function(){ /* to make sure the script runs after page load */
 		if($(this).html().length > max_length){ /* check for content length */
 
 			var short_content 	= $(this).html().substr(0,max_length); /* split the content in two parts */
-			var long_content	= $(this).html().substr(max_length);
+		  var long_content	= $(this).html().substr(max_length);
 
 			$(this).html(short_content+
 						 '<a href="#" class="read_more"><br/>Read More</a>'+
@@ -62,10 +62,25 @@ $(function(){ /* to make sure the script runs after page load */
 
 
 /*-----Maps API Documentation*/
-function initMap() {
+/*function initMap() {
   var mapDiv = document.getElementById('map');
   var map = new google.maps.Map(mapDiv, {
     center: {lat: 44.540, lng: -78.546},
     zoom: 8
+  });
+} */
+
+function initMap() {
+  var myLatLng = {lat: 43.001096144, lng: -78.7898985};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 6,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'University of Buffalo'
   });
 }
