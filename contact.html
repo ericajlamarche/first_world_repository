@@ -14,33 +14,35 @@
 </head>
 
 <body>
-    <div class="banner">
-      <img src="images/AdinkraNsaa Fat Ex.jpg" alt="Nsaa &ndash; Hand-woven Basket" width="100" height="100">
-      <h1 class="headline">Web Accessibility</h1>
-      <span class="tagline">Designing Web Pages for All Users.</span>
+  <a href="http://www.buffalo.edu/"><img class="logo" src="http://www.acsu.buffalo.edu/~dbertuca/images/UBlogostack.jpg" width="152" height="58" border="0" alt="Welcome to UB! Click here for Main UB Page"></a>
+  <h1 class="headline">Web Accessibility</h1>
+  <span class="tagline">Designing Web Pages for All Users</span>
+  <nav id="nav-main">
+          <ul>
+            <li><a href="web-access.html"> Home</a></li>
+            <li><a href="guidelines.html"> Guidelines</a></li>
+            <li><a href="laws.html"> Laws</a></li>
+            <li><a href="resources.html"> Resources</a></li>
+            <li><a href="contact.html"> Contact</a></li>
+          </ul>
+  </nav>
+
+  <div id="nav-trigger">
+    <span>Menu</span>
+  </div>
+
+  <nav id="nav-mobile"></nav>
+
+  <div id="page-wrap">
+        <div id="banner">
+          <div><img class="accessibility"src="http://cirrie.buffalo.edu/encyclopedia/images/webaccessibility_1.png" alt="accessibility map"></div>
+          <div><img class="accessibility" src="http://www.buffalo.edu/accessibility/images/index.jpg" alt="accessibility resources"></div>
+          <div><img class="accessibility" src="http://admissions.buffalo.edu/img/main/accessibility.jpg" alt="student"></div>
+        </div>
     </div>
-
-    <nav id="nav-main">
-            <ul>
-              <li><a href="web-access.html"> Home</a></li>
-              <li><a href="guidelines.html"> Guidelines</a></li>
-              <li><a href="laws.html"> Laws</a></li>
-              <li><a href="resources.html"> Resources</a></li>
-              <li><a href="contact.html"> Contact</a></li>
-            </ul>
-    </nav>
-
-    <div id="nav-trigger">
-      <span>Menu</span>
-    </div>
-
-    <nav id="nav-mobile"></nav>
 
 <body>
-
-  <div id="map"></div>
-  <h1> Contact Us </h1>
-    <section class="body-block" ng-app="contactApp">
+  <section ng-app="contactApp">
       <div ng-controller="controller">
           <div ng-repeat="contact in contacts">
               <h2>{{contact.name}}</h2>
@@ -49,13 +51,31 @@
               {{contact.email}}
           </div>
       </div>
+  </section>
 
-    </section>
+  <div id="weather"></div>
+  <p>It is currently: <span id="temp"></span></p>
+  <p>Wind: <span id="wind"></span></p>
 
-    <footer class="main-footer">
+  <script>
+  var weather = new XMLHttpRequest();
+  weather.open("GET", "http://api.wunderground.com/api/b37588d1da4153f8/conditions/q/NY/Buffalo.json", false);
+  weather.send(null);
+
+  var r = JSON.parse(weather.response);
+  var weather = "Current location: " + r.current_observation.display_location.full + "<br />";
+  var temp = r.current_observation.temperature_string + "<br />";
+  var wind = r.current_observation.wind_string + "<br />";
+
+  document.getElementById("weather").innerHTML = weather;
+  document.getElementById("temp").innerHTML = temp;
+  document.getElementById("wind").innerHTML = wind;
+  </script>
+
+  <footer class="main-footer">
         <div class="container">
             <a href="http://www.buffalo.edu/"><img src="http://www.acsu.buffalo.edu/~dbertuca/images/UBlogostack.jpg" width="152" height="58" border="0" alt="Welcome to UB! Click here for Main UB Page"></a>
-            <a name="nssa" id="nssa"></a><img src="images/AdinkraNsaa Fat Ex.jpg" alt="Nsaa &ndash; Hand-woven Basket" width="75" height="75"/>
+            <a name="nssa" class="nssa"></a><img src="images/AdinkraNsaa Fat Ex.jpg" alt="Nsaa &ndash; Hand-woven Basket" width="75" height="75"/>
             <p><span class="style12"><em><strong>Nsaa </strong></em>(Adinkra (Sub-Saharan African) language)<strong> = Hand-woven Basket</strong>
             Symbol of Excellence,   Genuineness, and Authenticity.<br />
             &ldquo; This symbol extols excellence and eschews   satisfaction with mediocrity.&rdquo;</span></p>
@@ -63,7 +83,7 @@
         </div>
     </footer>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_OnoesVSxBn__sLGb9zv1uRtRPkdJvg&callback=initMap"></script>
+    <script src="http://api.wunderground.com/api/62605f0948251cb2/geolookup/conditions/q/NY/Buffalo.json"></script>
 
   </body>
   </html>

@@ -9,7 +9,6 @@ angular.module('contactApp', [])
       phone: "(716) 645-1332",
       email: "dbertuca@buffalo.edu"
     },
-
     {
       name: "Mary Beth Betzold",
       address: "222A Lockwood Memorial Library, North Campus",
@@ -29,4 +28,4 @@ angular.module('contactApp', [])
       email: "jlbright@buffalo.edu"
     }
   ]
-})
+});

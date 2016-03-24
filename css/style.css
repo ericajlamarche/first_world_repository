@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+h1, .tagline {
+  padding: 5px 6px;
+}
+
+
 body {
   background-color: #33CC99;
   color: #4B0082;
@@ -35,7 +40,67 @@ table {
   text-align: center;
 }
 
+#page-wrap {
+  width: 800px;
+  margin: 60px auto;
+  position: relative;
+}
 
+
+/*-----Images----------------------*/
+
+.accessibility {
+  width: 785px;
+  height:285px;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
+  border: 0;
+}
+
+
+.nssa {
+  width: 75px;
+  height: 75px;
+}
+/*-----Banner----------------------*/
+
+
+#banner {
+  width: 800px;
+  height: 300px;
+  position: relative;
+  border: 8px solid #fff;
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.75);
+}
+
+#banner div {
+  position: absolute;
+}
+
+#banner div:nth-child(3) {
+  -webkit-animation: wipe 6s infinite;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-direction: alternate;
+  -webkit-mask-size: 2000px 2000px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom,
+      color-stop(0.00,  rgba(0,0,0,1)),
+      color-stop(0.45,  rgba(0,0,0,1)),
+      color-stop(0.50,  rgba(0,0,0,0)),
+      color-stop(0.55,  rgba(0,0,0,0)),
+      color-stop(1.00,  rgba(0,0,0,0)));
+}
+
+@-webkit-keyframes wipe {
+  0% {
+    -webkit-mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: -1200px -1200px;
+  }
+}
 
 
 /* Navigation -------------------- */
@@ -189,6 +254,7 @@ nav#nav-mobile {
     max-width: 1000px;
     margin: 0 auto;
   }
+
 }
 
 @media all and (max-width: 900px) {

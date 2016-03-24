@@ -59,28 +59,3 @@ $(function(){ /* to make sure the script runs after page load */
 
 
 });
-
-
-/*-----Maps API Documentation*/
-/*function initMap() {
-  var mapDiv = document.getElementById('map');
-  var map = new google.maps.Map(mapDiv, {
-    center: {lat: 44.540, lng: -78.546},
-    zoom: 8
-  });
-} */
-
-function initMap() {
-  var myLatLng = {lat: 43.001096144, lng: -78.7898985};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 6,
-    center: myLatLng
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'University of Buffalo'
-  });
-}
