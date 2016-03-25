@@ -1,13 +1,30 @@
 /* Base Styles -------------------- */
 
-@import url(https://fonts.googleapis.com/css?family=Lora);
-
 * {
   box-sizing: border-box;
 }
 
-h1, .tagline {
+header {
+  background-color: #0099FF;
+  color: #fff;
+  min-width: 100%;
+  padding: 15px 0;
+}
+
+
+h1, h2 {
+  font: 400 40px/1.3 'Bree Serif', Georgia, serif;
   padding: 5px 6px;
+
+}
+
+.tagline {
+  font: 400 50px/1.3 'Bree Serif', Georgia, serif;
+  padding-top: 10px;
+}
+
+nav {
+  font: 400 14px/1.6 'Open Sans', Verdana, Helvetica, sans-serif;
 }
 
 
@@ -15,7 +32,6 @@ body {
   background-color: #33CC99;
   color: #4B0082;
   list-style: none;
-  font-size: 1.125em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,7 +43,7 @@ body {
 }
 
 head {
-  font-size: 1.125em;
+  font-size: 1.17em;
   text-align: center;
   color: #4B0082;
   padding: 0;
@@ -36,8 +52,8 @@ head {
 }
 
 table {
-  font-size: 1.125em;
-  text-align: center;
+  font-size: 1.17em;
+  text-align: left;
 }
 
 #page-wrap {
@@ -58,12 +74,16 @@ table {
   width: 200px;
   height: 100px;
   border: 0;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
+  box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
 }
 
 
 .nssa {
   width: 75px;
   height: 75px;
+  padding: 5px;
 }
 /*-----Banner----------------------*/
 
@@ -133,7 +153,8 @@ table {
       border-right: solid 10px transparent; }
 
 nav {
-  margin-bottom: 30px; }
+  margin-bottom: 10px;
+}
 
 nav#nav-main {
   background-color: #0099FF;
@@ -189,11 +210,17 @@ nav#nav-mobile {
 
 /* Content Area-------------------- */
 
+.col{
+  background-color: #0099FF;
+  border: solid 11px transparent;
+  box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
+}
+
 .primary {
   display: inline-block;
   width: 50%;
   font-size: 1.125em;
-  list-style: circle;
+  list-style: none;
   float: left;
   text-align: left;
 }
@@ -208,7 +235,8 @@ nav#nav-mobile {
 }
 
 .tertiary {
-  display: block;
+  display: inline-block;
+  clear: both;
 }
 
 .tertiary ul {
@@ -217,11 +245,12 @@ nav#nav-mobile {
   text-align: left;
 }
 
-/*Map for Contact Page*/
-#map {
-  background-color: #CCC;
-  width: 500px;
-  height: 400px;
+
+/*API styling-----------------*/
+
+#weather {
+  margin: 20px;
+  padding: 10px;
 }
 
 
@@ -241,12 +270,8 @@ nav#nav-mobile {
     .row {
      display: flex
      flex-wrap: wrap;
-     width: 90%;
+     width: 50%;
      margin: 0 auto;
-   }
-
-   .col {
-     flex: 1 50%;
    }
 
   .container {
@@ -254,25 +279,60 @@ nav#nav-mobile {
     max-width: 1000px;
     margin: 0 auto;
   }
-
 }
 
-@media all and (max-width: 900px) {
+
+@media screen and (max-width: 900px) {
   #nav-trigger {
-    display: block; }
+    display: block;
+    margin-top: 30px;
+  }
 
   nav#nav-main {
-    display: none; }
+    display: none;
+  }
 
   nav#nav-mobile {
-    display: block; }
+    display: block;
+  }
+
+    #banner {
+      display: none;
+    }
+
+    .primary {
+    width: auto;
+    float: none;
+  }
+
+   .secondary {
+    width: auto;
+    float: none;
+    margin-left: 0px;
+    padding-bottom: 2px;
+  }
+
+   .teritary {
+    width: auto;
+    float: none;
+  }
 }
 
-@media (min-width: 1025px) {
+
+@media screen and (min-width: 1024px) {
+
+nav#nav-main{
+  margin-top: 40px;
+}
 
  .row {
     width: 100%;
     max-width: 1150px;
+  }
+
+  .col{
+    padding: 0.5%;
+    margin: 10px;
   }
 
   .container {
@@ -280,8 +340,28 @@ nav#nav-mobile {
 		max-width: 1150px;
 	}
 
-	.primary, .secondary, .tertiary {
-		width: 45%;
-	}
+  .primary {
+    width: 45%;
+    display: inline-block;
+    font-size: 1.125em;
+    list-style: none;
+    float: left;
+    text-align: left;
+  }
+  .secondary {
+    width: 45%;
+    float: right;
+    display: inline-block;
+    font-size: 1.125em;
+    list-style: none;
+    text-align: left;
+  }
+
+  .teritary {
+    clear: both;
+    width: 98.5%;
+    float: none;
+    border: none;
+  }
 
 }
